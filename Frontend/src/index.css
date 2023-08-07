@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #202225;
+}
+
+.todoArea::-webkit-scrollbar {
+   width: 8px;               /* width of the entire scrollbar */
+   scroll-behavior: smooth;
+}
+
+ .todoArea::-webkit-scrollbar-track {
+   border-radius: 8px;
+   background-color: #0005;        /* color of the tracking area */
+}
+
+.todoArea::-webkit-scrollbar-thumb {
+   margin: 4px;
+   background-color: #3B82F6;    /* color of the scroll thumb */
+   border-radius: 8px;       /* roundness of the scroll thumb */
+   cursor: pointer;
+ }
+
+@media (max-width: 350px) {
+   .todo {
+      flex-direction: column;
+      font-size: 16px !important;
+   }
+   
+   .todo span {
+      gap: 24px;
+      width: 100%;
+      justify-content: space-between!important;
+   }
+
+   .todo p {
+      font-size: 16px;
+   }
+}
+
+@media(max-width: 430px) {
+   form {
+      flex-direction: column;
+   }
+
+   form button {
+      width: 100% !important;
+   }
+}
